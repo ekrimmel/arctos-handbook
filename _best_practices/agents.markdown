@@ -9,7 +9,7 @@ redirect_from:
  - /best_practices/agents/
 ---
 
-Agents are people, organizations, groups, code, or any human entity that performs actions. This includes collectors, authors of publications, users of objects, issuers of identifiers and, if you enter or edit data, you are an Agent. A single Agent can have many roles and many names. No matter how many roles or names an Agent has, there should be only one Agent record in Arctos to represent them. Agent records are never deleted and the `agent_id` is permanent and stable, so you can reliably link to an Arctos Agent record via the URL, e.g. [https://arctos.database.museum/agent/21314876](https://arctos.database.museum/agent/21314876).
+Agents are people, organizations, groups, code, or any entity that performs actions. This includes collectors, authors of publications, users of objects, issuers of identifiers and, if you enter or edit data, you are an Agent. A single Agent can have many roles and many names. No matter how many roles or names an Agent has, there should be only one Agent record in Arctos to represent them. Agent records are never deleted and the `agent_id` is permanent and stable, so you can reliably link to an Arctos Agent record via the URL, e.g. [https://arctos.database.museum/agent/21314876](https://arctos.database.museum/agent/21314876).
 
 {% include caution.html content="Agents are shared by all Arctos members. Always use caution when creating or editing a shared resource and make sure that others who might be affected by a change are notified." %}
 
@@ -21,8 +21,8 @@ Agents should exist only when they carry independent information. The [verbatim 
 
 **---DESCRIBE WHERE VERBATIM AGENT DIFFERS, DwC export, no activity, reports---**
 
-### Use the existing Agent for "unknown"
-Arctos has an [Agent record for "unknown"](https://arctos.database.museum/agent/0) when the person or organization doing the collecting, identifying, borrowing, etc. is unknown or unclear. Do not create new Agents such as "Collector unknown" or "Determiner unknown." Consider using the [unknown](https://arctos.database.museum/agent/0) Agent along with the [verbatim agent](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctattribute_type#verbatim_agent) attribute rather than creating cryptic agents such as "A. B. C." or "S. Smith."
+### Use the existing "unknown" Agent
+Arctos has an [Agent record for "unknown"](https://arctos.database.museum/agent/0) when the person or organization doing the collecting, identifying, borrowing, etc. is unknown or unclear. Do not create new Agents such as "Collector unknown" or "Determiner unknown." When no agent is required, simply do not add one, otherwise, consider using the [unknown](https://arctos.database.museum/agent/0) Agent along with the [verbatim agent](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctattribute_type#verbatim_agent) attribute rather than creating cryptic agents such as "A. B. C." or "S. Smith."
 
 ### Avoid duplicating Agents
 
@@ -72,7 +72,7 @@ Attributes exist to capture data explicitly and more specific attribute types ar
 Name components are always useful to include, e.g. multiple `first name` attributes where a person's first name has variations such as "Robert" and "Bob." Note that an Arctos bot will create `first name`, `middle middle`, and `last name` attributes based on the `Preferred Name`. **---WHAT ALL DOES THIS BOT DO?---** Similarly, the `aka` attribute is very handy for recording name variants, e.g. "Bob Jones" is the `Preferred Name` is "Robert Jones." Use `aka` attributes to include common ASCII-128 (A-Z, no accents or foreign characters) variants, alternative transliterations, and text interpretations of symbols. For example:
 - "Николай Е. Докучаев" is an acceptable `Preferred Name`, but should have an `aka` attribute of "Nikolai E. Dokuchaev"
 - "Raúl Gutiérrez" should include an `aka` attribute of "Raul Gutierrez."
-- "Ida Schoenfeld" should include an `aka` attribute of "Ida Schönfeld" 
+- "Ida Schönfeld" should include an `aka` attribute of "Ida Schoenfeld" 
 - "Smith & Wesson" should include an `aka` attribute of "Smith and Wesson"
 
 ### Identifiers
