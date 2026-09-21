@@ -1,12 +1,12 @@
 ---
 title: Agents
 authors: Dusty L. McDonald
-date_updated: 
+date_updated: 2026-07-31
 ---
 
-Agents are people, organizations, groups, code, or any human entity that performs actions. Agents are collectors, authors of publications, users of objects, issuers of identifiers and, if you enter or edit data, you are an Agent. A single Agent can have many roles and many names. No matter how many roles or names an Agent has, there should be only one Agent profile in Arctos to represent them. Agents are not deleted, but may be default-hidden by a 'bad duplicate of' relationship.
+Agents are people, organizations, groups, code, or any human entity that performs actions. Agents are collectors, authors of publications, users of objects, issuers of identifiers and, if you enter or edit data, you are an Agent. A single Agent can have many roles and many names. No matter how many roles or names an Agent has, there should be only one Agent record in Arctos to represent them. Agents are not deleted, but may be default-hidden by a 'bad duplicate of' relationship.
 
-## Agent
+## agent
 
 Table Agent is the central or core Agent data table.
 
