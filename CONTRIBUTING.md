@@ -94,7 +94,7 @@ Use highlight boxes to call out tips, cautions, and frequently asked questions i
 Content supports Markdown, including links:
 
 ```liquid
-{% include tip.html content="See [batch-loading agents]({% link _how_to/batch-loading-agents.markdown %}) for details." %}
+{% include tip.html content="See [batch-loading agents](/how_to/batch-loading-agents) for details." %}
 ```
 
 If your content must include quotation marks, escape in the code using a single quote:
