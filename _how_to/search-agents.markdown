@@ -68,7 +68,3 @@ Created By (and corresponding **match** types and **Created Date**) may be used 
 ## Video Tutorial
 
 [![YouTube: How To Search Agents](https://raw.githubusercontent.com/ArctosDB/documentation-wiki/gh-pages/tutorial_images/Bear%20play.png)](https://youtu.be/MfXTtQ2A5hY)
-
-## Edit this How To
-
-If you see something that needs to be edited in this How To, you can create an issue using the link under the search widget at the top left side of this page, or you can edit directly [here](https://github.com/ArctosDB/documentation-wiki/edit/gh-pages/_how_to/How-to-Search-Agents.markdown).
