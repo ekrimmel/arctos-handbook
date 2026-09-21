@@ -1,7 +1,7 @@
 ---
 title: Agentify Verbatim Agents
-authors: Teresa J. Mayfield-Meyer, Angela Linn
-date_updated: 2023-01-31
+authors: Teresa J. Mayfield-Meyer, Angela Linn, Erica R. Krimmel
+date_updated: 2026-08-03
 redirect_from:
   - /how_to/How-to-Agentify-Verbatim-Agents.html
   - /how_to/How-to-Agentify-Verbatim-Agents/
@@ -9,52 +9,42 @@ redirect_from:
   - /how_to/how-to-agentify-verbatim-agents/
 ---
 
-If you have new information about a person that is currently only recorded in a [verbatim agent attribute](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctattribute_type#verbatim_agent), you can follow these steps to add their agent as a collector, creator, preperator or subject in the records in which they performed those roles.
+"Agentifying" refers to the process of converting information about a person or organization that is currently only recorded in a [verbatim agent](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctattribute_type#verbatim_agent) attribute into a full Arctos Agent record. Doing so may be appropriate if you learn more about the person or organization and need a place to store this information independent of the Catalog record. Follow these steps to create a new Agent record from a verbatim agent, and connect the new Agent to Catalog records in the appropriate roles (e.g. collector, creator, preparator, subject, etc.).
 
-**Documentation:** [Agents]({% link _documentation/agent.markdown %})
+{% include tip.html content="See also this related [video tutorial](https://www.youtube.com/watch?v=np1jQzi0f9Q)" %}
 
-## Create the Agent
+## Create the Agent record
 
-If the agent your verbatim agent represents does not already exist in Arctos, follow the instructions in [How To Create an Agent]({% link _how_to/create-agents.markdown %}) to add the agent in Arctos. 
+Before creating a new Agent record, [search Arctos carefully]({% link _how_to/search-agents.markdown %}) to make sure that the entity your verbatim agent represents does not **already** exist in Arctos, then follow the instructions in [How To Create an Agent]({% link _how_to/create-agents.markdown %}).
 
+## Connect the new Agent to Catalog records
 
-## Find Records with the Verbatim Agent
+### Find Catalog records with the verbatim agent
 
-From the main search page, search the verbatim agent attribute for the verbatim agent name you want to convert to an agent.
+From the [main Catalog record search](https://arctos.database.museum/search.cfm), search the `verbatim agent` _Record Attribute_ for the verbatim agent namestring.
 
 ![](https://raw.githubusercontent.com/ArctosDB/documentation-wiki/gh-pages/tutorial_images/Agents/image7.png)
 
-OR
-
-From any catalog record with the verbatim agent select the search option next to the verbatim agent attribute.
+Alternatively, from any Catalog record with an existing attribute containing the verbatim agent, click the _Search_ button next to the attribute.
 
 ![](https://raw.githubusercontent.com/ArctosDB/documentation-wiki/gh-pages/tutorial_images/Agents/image3.png)
 
-## Manage
+### Add the Agent to Catalog records
 
-In your search results find the Tools Menu
+Either of the options above will bring you to the Catalog record search results interface. Find _Manage > Collectors_ under the _Tools_ menu:
 
 ![](https://raw.githubusercontent.com/ArctosDB/documentation-wiki/gh-pages/tutorial_images/Agents/image6.png)
 
-Select “Manage Collectors”
-
 ![](https://raw.githubusercontent.com/ArctosDB/documentation-wiki/gh-pages/tutorial_images/Agents/image8.png)
 
-Enter the agent’s name in “Name” field; select the agent role and list order, then click the “Insert Agent” button.
+Enter the `Preferred Name` of the Agent in the _Name_ field, then select the Agent role and list order. Click the _Insert Agent_ button to connect the Agent record to the Catalog records listed in this interface.
 
 ![](https://raw.githubusercontent.com/ArctosDB/documentation-wiki/gh-pages/tutorial_images/Agents/image9.png)
 
+To confirm you did this step correctly, performing a new Catalog record search using the _Agents (collector)_ field instead of via verbatim agent attribute. You should get the same results.
 
-## Confirm
+## What to do with the verbatim agent attribute
 
-After the additions have been made, you can confirm the agents by performing the same search used to mange them.
+After agentifying, you may feel inclined to discard the verbatim agent attribute because they seem redundant, but in most cases they provide good information about verbatim documentation and should be left in place. If they are truly redundant (i.e. the Agent name is exactly the same and not at all ambiguous), these attributes can be removed using the [Un-Bulkload Attributes tool](https://arctos.database.museum/loaders/BulkUnLoadAttribute.cfm). 
 
-## Verbatim Agent Attribute
-
-You may want to discard the verbatim agent attributes because they seem redundant, but in most cases they provide good information about verbatim documentation and should be left in place. If they are truly redundant (the new agent name is exactly the same), these attributes can be removed using the [Attribute Unload Tool](https://arctos.database.museum/tools/BulkUnLoadAttribute.cfm). 
-
-{% include caution.html content="The Attribute Unload Tool will unload ALL verbatim agent attributes from the records indicated in the tool. If any records contain verbatim agents other than the one you want to remove, you may want to check with a DBA to have them removed for you." %} 
-
-## Video Tutorial
-
-[Video Tutorial](https://www.youtube.com/watch?v=np1jQzi0f9Q)
+{% include caution.html content="The Un-Bulkload Attributes tool will unload ALL verbatim agent attributes from the records indicated in the tool. If any records contain verbatim agents other than the one you want to remove, you may want to check with a DBA to have them removed for you." %}

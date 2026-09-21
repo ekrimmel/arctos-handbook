@@ -1,7 +1,7 @@
 ---
 title: Creating Meaningful Agents
 authors: Teresa J. Mayfield-Meyer, Dusty L. McDonald, Erica R. Krimmel
-date_updated: 2026-07-31
+date_updated: 2026-09-21
 redirect_from:
  - /best_practices/Agents.html
  - /best_practices/Agents/
@@ -19,10 +19,8 @@ Agents are people, organizations, groups, code, or any entity that performs acti
 
 Agents should exist only when they carry independent information. The [verbatim agent](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctattribute_type#verbatim_agent) attribute is functionally similar to Agents, and should be used for linking low-information names to catalog records. Using `verbatim agent` may be an appropriate choice if the agent is relatively unknown, unlikely to become known, and has no or little other activity. For example, "fisherman" should always be a verbatim agent, but "G. Hope" may also be appropriate to enter as a verbatim agent if you are unlikely to discover any additional disambiguating information.
 
-**---DESCRIBE WHERE VERBATIM AGENT DIFFERS, DwC export, no activity, reports---**
-
 ### Use the existing "unknown" Agent
-Arctos has an [Agent record for "unknown"](https://arctos.database.museum/agent/0) when the person or organization doing the collecting, identifying, borrowing, etc. is unknown or unclear. Do not create new Agents such as "Collector unknown" or "Determiner unknown." When no agent is required, simply do not add one, otherwise, consider using the [unknown](https://arctos.database.museum/agent/0) Agent along with the [verbatim agent](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctattribute_type#verbatim_agent) attribute rather than creating cryptic agents such as "A. B. C." or "S. Smith."
+Arctos has an [Agent record for "unknown"](https://arctos.database.museum/agent/0) when the person or organization doing the collecting, identifying, borrowing, etc. is unknown or unclear. Do not create new Agents such as "Collector unknown" or "Determiner unknown." Consider using the [unknown](https://arctos.database.museum/agent/0) Agent along with the [verbatim agent](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctattribute_type#verbatim_agent) attribute rather than creating cryptic agents such as "A. B. C." or "S. Smith."
 
 ### Avoid duplicating Agents
 
@@ -30,11 +28,11 @@ No matter how many roles or alternate names a person or organization has, they s
 
  - someone who may have married and is now known by both a birth name and a married name
 
- - non-English names that may exist in the database under alternative transliterations. For example, Felix Chernyavski’s name is published in English as Tchernyavski and Chernyavsky. In these cases, use the `aka` Agent attribute for name variants rather than creating additional Agents.
+ - non-English names that may exist in the database under alternative transliterations. For example, Felix Chernyavski’s name is published in English as "Tchernyavski" and "Chernyavsky." In these cases, use the `aka` Agent attribute for name variants rather than creating additional Agents.
 
-For legacy data, determining whether or not you would be creating a duplicate agent can be challenging. Are Robert Smith, R. Smith, and Bob Smith three agents or one? Sometimes, the activities already recorded for an Agent makes the answer clear; e.g., there were probably not two Eleazer Fitzgarrolds collecting grasshoppers in northern Madagascar in the 1930s. To see Agent activity, click on the _Show all Activity_ link from any Agent record. If you cannot determine whether or not your namestring is new or a duplicate Agent, use the existing Agent in Arctos. Having multiple Agents collecting under the name "R. Smith" doesn’t affect any conceivable use of the data, and if one of the R. Smiths distinguishes themselves somehow, a new Agent can be created then.
+For legacy data, determining whether or not you would be creating a duplicate agent can be challenging. Are Robert Smith, R. Smith, and Bob Smith three agents or one? Sometimes, the activities already recorded for an Agent makes the answer clear; e.g., there were probably not two Eleazer Fitzgarrolds collecting grasshoppers in northern Madagascar in the 1930s. To see Agent activity, click on the _Show all Activity_ link from any Agent record. If you cannot determine whether or not your namestring is new or a duplicate Agent, use the existing Agent in Arctos. Having multiple Agents collecting under the name "R. Smith" doesn’t affect any conceivable use of the data, and if one of the R. Smiths distinguishes themselves somehow, a new Agent can be created then. When you create a new or edit an existing Agent record, provide as much information as possible to help avoid duplicate Agents in the future.
 
-When you create a new or edit an existing Agent record, provide as much information as possible to help avoid duplicate Agents in the future. If you find duplicate Agent records, don't orphan them! Flag them by creating a `bad duplicate of` relationship to the preferred Agent record so that the duplicate Agent will be hidden. Any other types of records attached to the bad duplicate should be updated to the preferred Agent.
+{% include tip.html content="If you find duplicate Agent records, don't orphan them! Flag them by creating a `bad duplicate of` relationship to the preferred Agent record so that the duplicate Agent will be hidden. Any other types of records attached to the bad duplicate should be updated to the preferred Agent." %}
 
 ## Preferred name
 
@@ -42,18 +40,18 @@ When you create a new or edit an existing Agent record, provide as much informat
 
 The following guidelines apply to preferred names:
 - Use the most complete name possible. For people, format as "First Middle Last" as a matter of convention for Western names. Exceptions to this convention should be made according to cultural preferences or at the request of the individual represented by the Agent record.
-- Follow Wikipedia for the `Preferred Name` of non-person Agents. See for example https://en.wikipedia.org/wiki/United_States_Fish_and_Wildlife_Service, which should be entered in Arctos as "United States Fish and Wildlife Service."
-- Follow abbreviations in `Preferred Name` with a period and space, e.g. "J. J. Smith" never "JJ Smith" or "J J Smith." If nonstandard data are important search terms, include them as `aka` attributes. 
+- Follow Wikipedia for the `Preferred Name` of non-person Agents. See for example [https://en.wikipedia.org/wiki/United_States_Fish_and_Wildlife_Service](https://en.wikipedia.org/wiki/United_States_Fish_and_Wildlife_Service), which should be entered in Arctos as "United States Fish and Wildlife Service."
+- Follow abbreviations in `Preferred Name` with a period and space, e.g. "J. J. Smith" never "JJ Smith" or "J J Smith." If nonstandard formats are important search terms, include them as `aka` attributes. 
 - Do not use extraneous spaces, nonprinting characters, or (for person Agents) commas in `Preferred Name`.
 - Consider only including prefix, suffix, title, etc. in `aka` attributes so that the `Preferred Name` does not change over time. For example, if "John Smith" has a son and becomes "John Smith Senior," and then "John Smith Junior" has a son and becomes "John Smith II," or if "Captain John Smith" gets promoted to "Major John Smith." If you must create a `Preferred Name` with a prefix or suffix, ensure the bare name exists as an `aka`.
-- Don't include parenthetical information in `Preferred Name`. If the parenthetical is descriptive, use an Agent attribute instead, e.g. "Ken Green (Ohio)" should be "Ken Green" with a `correspondence address` attribute of "Ohio." The value of `Preferred Name` formerly had to be unique within Arctos but that is no longer true.
+- Don't include parenthetical information in `Preferred Name`. If the parenthetical is descriptive, use an Agent attribute instead, e.g. "Ken Green (Ohio)" should be "Ken Green" with a `correspondence address` attribute of "Ohio." The value of `Preferred Name` formerly had to be unique within Arctos and existing parentheticals are mostly legacy from this rule.
 - Avoid abbreviations. For example, "Co." has multiple meanings whereas "Company" is unambiguous, and "John J. Smith" is more ambiguous than "John Johnson Smith." If you do abbreviate, include an unabbreviated equivalent, e.g. via an `aka` attribute. There are a few exceptions for common abbreviations:
-    - "St." is acceptable as part of a `Preferred Name` when that is the convention for spelling the name, e.g. "Althea St. Martin." Note, do not use "St." to abbreviate a name with "Saint."
+    - "St." is acceptable as part of a `Preferred Name` when that is the convention for spelling the name, e.g. "Althea St. Martin." Do not use "St." to abbreviate a name conventionally spelled "Saint."
     - "Mrs." is acceptable at the beginning of a `Preferred Name` when no further information is available, e.g. "Mrs. Hendershaw."
     - "Dr." is acceptable at the beginning of a `Preferred Name` when no further information is available, e.g. "Dr. Hendershaw."
     - "Jr." is acceptable at the end of a `Preferred Name`, although in general suffixes belong in `aka` names. Do not use a comma, e.g. "Larry Amox Jr." not "Larry Amox, Jr."
     -	"Sr." is acceptable at the end of a `Preferred Name`, although in general suffixes belong in `aka` names. Do not use a comma, e.g. "Larry Amox Sr." not "Larry Amox, Sr."
-- Don't include anything other than Agent information in Agent records, e.g. uncertainty in the way an agent was recorded on a catalog record. A collector recorded as "John Smith?" could use either the Agent "unknown" or "John Smith" and document the uncertainty of "?" in an appropriate remarks field on the catalog record or via the `verbatim agent` catalog record attribute.
+- Don't include anything other than Agent information in Agent records, e.g. uncertainty in the way an agent was recorded on a catalog record. A collector recorded as "John Smith?" could use either the Agent "unknown" or "John Smith," and document the uncertainty of "?" in an appropriate remarks field on the catalog record or via the `verbatim agent` catalog record attribute.
 
 ### Different Agent, same name
 
@@ -69,7 +67,7 @@ Attributes exist to capture data explicitly and more specific attribute types ar
 
 ### Additional names
 
-Name components are always useful to include, e.g. multiple `first name` attributes where a person's first name has variations such as "Robert" and "Bob." Note that an Arctos bot will create `first name`, `middle middle`, and `last name` attributes based on the `Preferred Name`. **---WHAT ALL DOES THIS BOT DO?---** Similarly, the `aka` attribute is very handy for recording name variants, e.g. "Bob Jones" is the `Preferred Name` is "Robert Jones." Use `aka` attributes to include common ASCII-128 (A-Z, no accents or foreign characters) variants, alternative transliterations, and text interpretations of symbols. For example:
+Name components are always useful to include, e.g. multiple `first name` attributes where a person's first name has variations such as "Robert" and "Bob." Note that an Arctos bot will create `first name`, `middle middle`, and `last name` attributes based on the `Preferred Name`. Similarly, the `aka` attribute is very handy for recording name variants, e.g. "Bob Jones" is the `Preferred Name` of "Robert Jones." Use `aka` attributes to include common ASCII-128 (A-Z, no accents or foreign characters) variants, alternative transliterations, and text interpretations of symbols. For example:
 - "Николай Е. Докучаев" is an acceptable `Preferred Name`, but should have an `aka` attribute of "Nikolai E. Dokuchaev"
 - "Raúl Gutiérrez" should include an `aka` attribute of "Raul Gutierrez."
 - "Ida Schönfeld" should include an `aka` attribute of "Ida Schoenfeld" 
@@ -95,7 +93,7 @@ Whenever possible, add an appropriate `status` attribute to indicate the data qu
 
 ## Relationships
 
-Relationships between Agents are a fundamental feature in Arctos. Like date of birth and date of death, relationships can be critical to understanding duplication and similarities in names, e.g. knowing that "John Smith Jr. is `child of` John Smith" helps clarify the situation even in the face of suddenly-ambiguous names, promotions, marriages, and other name changes or alternatives. Most relationships are familial (e.g. `spouse of`, `parent of`), professional (e.g. `student of`, `employee of`) or, for organization Agents, structural (`division of`, `established by`). Relationships can be between Agents of different types, for instance "John Doe" might be a `student of` both "James Jameson" (his advisor) and "University of Alabama" (his alma mater).
+Relationships between Agents are a fundamental feature in Arctos. Like date of birth and date of death, relationships can be critical to understanding duplication and similarities in names, e.g. knowing that "John Smith Jr. is `child of` John Smith" helps clarify the situation even in the face of ambiguous names, promotions, marriages, and other name changes or alternatives. Most relationships are familial (e.g. `spouse of`, `parent of`), professional (e.g. `student of`, `employee of`) or, for organization Agents, structural (`division of`, `established by`). Relationships can be between Agents of different types, for instance "John Doe" might be a `student of` both "James Jameson" (his advisor) and "University of Alabama" (his alma mater).
 
 Dates are often very useful metadata to associate with relationships. For example, "John Doe" was a `student of` "University of Alabama" with a `begin date` and `end date` provides additional context. Dates can be as imprecise as the year, which is helpful for legacy Agent information.
 
