@@ -10,21 +10,21 @@ redirect_from:
 
 How data are migrated to Arctos depends on the state of the existing collection data as well as the size and scope of the collection. Arctos staff can provide a basic assessment for prospective collections on how simple or complex their data migration may be. That said, all data migrations require dedicated time from both Arctos and the staff at incoming collections. For more complex migrations, institutions should consider how to account for work related to data migration regardless of whether that work is performed by Arctos staff or by staff within the institution.
 
+## Overview
+
 Data migration is centered on Catalog Records, since these are the primary form of record-keeping for collection objects in Arctos. There are two main ways to create Catalog Records in Arctos: via the Data Entry interface or via Bulkloading.
 
-**Data Entry interface:** For collections coming into Arctos with little to no data in a digital format, the Data Entry interface can be used to create one catalog record at a time. This interface is based on a customizable form, and uses existing data authorities and code tables to populate values for geography, taxonomy, agents, attribute types, and part names. The advantage of entering data using this form is that it requires minimal knowledge about how data are structured in Arctos. The disadvantage is that data entry is slower because the records are entered one at a time. However, the process can be sped up by customizing the form. Note also that certain data must already exist in Arctos to populate single record data entry. This includes [selection of code table terms in Manage Collection]({% link _best_practices/data-migration.markdown %}#collection-level-metadata), [setting up Operators to work in your collection]({% link _best_practices/data-migration.markdown %}#user-management), and creation of necessary [Agents]({% link _best_practices/data-migration.markdown %}#migrate-agent-data), [Accessions]({% link _best_practices/data-migration.markdown %}#migrate-accession-data), [Taxonomy]({% link _best_practices/data-migration.markdown %}#XXX), and [Higher Geography]({% link _best_practices/data-migration.markdown %}#XXX).
+**Data Entry interface:** For collections coming into Arctos with little to no data in a digital format, the Data Entry interface can be used to create one catalog record at a time. This interface is based on a customizable form, and uses existing data authorities and code tables to populate values for geography, taxonomy, agents, attribute types, and part names. The advantage of entering data using this form is that it requires minimal knowledge about how data are structured in Arctos. The disadvantage is that data entry is slower because the records are entered one at a time. However, the process can be sped up by customizing the form. Note also that certain data must already exist in Arctos to populate single record data entry. This includes [selection of code table terms in Manage Collection]({% link _best_practices/data-migration.markdown %}#collection-level-metadata), [setting up Operators to work in your collection]({% link _best_practices/data-migration.markdown %}#user-management), and creation of necessary [Agents]({% link _best_practices/data-migration.markdown %}#agents), [Accessions]({% link _best_practices/data-migration.markdown %}#migrate-transactions), [Taxonomy]({% link _best_practices/data-migration.markdown %}#identifications), and [Higher Geography]({% link _best_practices/data-migration.markdown %}#higher-geography).
 
-_See also [How To Enter Data for a Single Record](/how_to/enter-data-for-a-single-record)._
+{% include tip.html content="Learn more about the data entry interface from [How To Enter Data for a Single Record](/how_to/enter-data-for-a-single-record)." %}
 
 **Bulkloading data:** For collections coming into Arctos with existing data in a digital format, e.g. from another database or in spreadsheets, bulkloading data into Arctos will likely be more efficient. To do so, there are a suite of Arctos tools (“bulkloaders”) that share a common structure and can use CSV-formatted data to batch create most types of records (e.g. catalog records, agents, localities, events, taxonomy, etc.). The bulkloader for Catalog Records can also create data related to parts, localities, and events. Formatting CSV files for bulkloading involves using the correct column headings, as well as the correct values for data controlled by authorities and code tables. The advantage of bulkloading data is that a large number of records can be created at once. The disadvantage is that there is more of a learning curve, and that bulkloading requires knowledge about how Arctos data are structured.
 
-_See also documentation for the [Bulkloader](/documentation/bulkloader), [Bulkloader Field Documentation](https://docs.google.com/spreadsheets/d/1VbNC3k17WAHMum_qD5UYoXxUUWwXXh5gZSM5vfGvRzU/edit?usp=sharing) and [How to Bulkload Catalog Records](/how_to/bulkload-catalog-records)._
+{% include tip.html content="Learn more about bulkloading data from the [Bulkloader documentation page](/documentation/bulkloader), [Bulkloader Field Documentation](https://docs.google.com/spreadsheets/d/1VbNC3k17WAHMum_qD5UYoXxUUWwXXh5gZSM5vfGvRzU/edit?usp=sharing) and [How to Bulkload Catalog Records](/how_to/bulkload-catalog-records), as well as the rest of this data migration page." %}
 
-## Overview
+In general, the data migration process has a standard sequence of events (see diagram below) as well as an iterative nature. Within that process, each incoming collection will have unique needs. Arctos works with incoming collections to document such needs via a document that we call a "Data Migration Plan."
 
-In general, the data migration process has a standard sequence of events (see diagram below) as well as an iterative nature. Within that process, each incoming collection will have unique needs. Arctos works with incoming collections to document such needs via a Data Migration Plan. 
-
-**---INSERT A DIAGRAM?---**
+![Arctos data migration process: a Prepare stage, then five sequential stages from Migrate Transactions to Publish to Data Aggregators]({{ '/images/arctos-data-migration.svg' | relative_url }}){: style="display:block; margin:0 auto; width:90%;"}
 
 ### People involved
 
@@ -88,7 +88,7 @@ _See also: documentation for [Permits](/documentation/permits) and [Loans](/docu
 
 {% include task.html content="At least one person at every Arctos institution should have permission to manage Transactions. Anyone who should be given this permission will be assigned a GitHub issue to [Learn about Transactions in Arctos](https://github.com/ArctosDB/data-migration/blob/master/.github/ISSUE_TEMPLATE/transactions-learn-permission.md)." %}
 
-## Reconcile and prepare data
+## Reconcile and tidy data
 
 ### Agents
 
@@ -204,11 +204,19 @@ Object tracking is a powerful tool that allows Arctos collections to track the p
 ## Migrate catalog records
 Once your data has been tidied and matched to Arctos Code Tables and other resources, you can build a bulkload file.
 
+### Bulkload as a single dataset
+
+### Bulkload different record types separately
+
 https://arctos.database.museum/Bulkloader/bulkloaderBuilder.cfm
 
 {% include tip.html content="See also [How to Bulkload Catalog Records](/how_to/bulkload-catalog-records)" %}
 
 ## Migrate Media
+
+### File storage and access
+
+### Bulkload media records
 
 {% include tip.html content="See also [How to Create Media](/how_to/create-media-images), and the documentation for [Media](/documentation/media)" %}
 
