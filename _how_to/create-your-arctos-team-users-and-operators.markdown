@@ -17,9 +17,9 @@ Anyone can have an Arctos **user account**, which is needed to view and download
 
 If you are new to Arctos, or newly in a role where you will have access to edit data in Arctos, you need to become an Arctos Operator. To do so, follow these instructions:
 
-1. **Create a TACC user account**. [Check if you already have one here](https://accounts.tacc.utexas.edu/login); if not, then create a new account at [https://accounts.tacc.utexas.edu/register](https://accounts.tacc.utexas.edu/register). Note that your affiliation and email address should be those associated with an Arctos institutional member (not a G-mail or other personal email address).
+1. **Create a TACC user account**. [Check if you already have one here](https://accounts.tacc.utexas.edu/login); if not, then create a new account at [https://accounts.tacc.utexas.edu/register](https://accounts.tacc.utexas.edu/register). Note that your affiliation and email address should be those associated with an Arctos institutional member (not a Gmail or other personal email).
 1. **Log into Arctos using the "Log in with TACC" button** and credentials for your newly created account. This creates a new Arctos account with your TACC credentials.
-1. **Add your preferred email to your Arctos profile**. Arctos sends notifications to Operators via email so it is important that you add an email account that you regularly check to Arctos. Go to your Arctos account profile (click _Profile_ in the top right menu) and add your preferred email address, it does NOT need to be the same as your TACC credential email.
+1. **Add your preferred email to your Arctos profile**. Arctos sends notifications to Operators via email so it is important that you add an email account that you check regularly to Arctos. Go to your Arctos account profile (click _Profile_ in the top right menu) and add your preferred email address; it does NOT need to be the same as your TACC account email.
 1. **Create a GitHub account** if you expect to do more than basic data entry and don’t already have one. See [How To Create A GitHub Account]({% link _how_to/use-github-for-arctos.markdown %}). If you already have a GitHub account, just use the one you have!
 1. **Tell your Arctos manager your TACC and GitHub usernames**. Your Arctos manager is the person authorized to grant Operator permissions for the collection you work with. Depending on the circumstance, this may be your supervisor, a colleague, or an Arctos staff member. If you are unsure whether you need a GitHub account, start by telling your Arctos manager your TACC username; your GitHub account can always be linked later.
 
@@ -28,9 +28,9 @@ If you are new to Arctos, or newly in a role where you will have access to edit 
 Following TACC's security policies keeps Arctos database operations safe! See TACC [account documentation](https://docs.tacc.utexas.edu/basics/accounts/) for troubleshooting common problems. In particular, see TACC's [limitations on email addresses](https://docs.tacc.utexas.edu/basics/accounts/#newaccounts). Before requesting additional help, ensure that you can [log in to your TACC account](https://accounts.tacc.utexas.edu/login?redirect_url=profile), and that multi-factor authentication is enabled for your account.
 
 Other helpful links include:
- -[Reset Password](https://accounts.tacc.utexas.edu/forgot_password)
- -[Find your username](https://accounts.tacc.utexas.edu/forgot_username)
- -[TACC login support](https://accounts.tacc.utexas.edu/login_support)
+ - [Reset Password](https://accounts.tacc.utexas.edu/forgot_password)
+ - [Find your username](https://accounts.tacc.utexas.edu/forgot_username)
+ - [TACC login support](https://accounts.tacc.utexas.edu/login_support)
 
 ## Tasks for Arctos managers
 
@@ -42,7 +42,7 @@ If you have someone new to Arctos, or newly in a role where they need access to 
 
 1. **Ensure the new Operator has an Arctos Agent record**. [Search to find an existing Agent record](https://arctos.database.museum/agent.cfm), or follow the instructions on [How to Create Agents]({% link _how_to/create-agents.markdown %}) if no record exists yet. Make sure that the Agent record has a valid email address attribute and, if relevant, GitHub identifier attribute.
 1. **Link the Agent to the Operator account**. Go to [Tools Directory > Agents & Users > Operator: Manage](https://arctos.database.museum/AdminUsers.cfm) and enter the TACC username given to you by the user, then click "edit" next to the search result where the authentication is listed as "TACC OAuth." On the next interface, click "add Agent" to search for and attach the correct Arctos Agent record.
-1. **Invite Operator**. Under the section of the interface labeled "Database User Status," click the button to "Invite Operator"; note that this button will not appear if a valid email address is not present in the user's Arctos profile (see step 3 in [Tasks for new users](#tasks-for-new-users)). Doing so will send the user an email notification and they must accept the invitiation before you can assign them any permissions (see below).
+1. **Invite Operator**. Under the section of the interface labeled "Database User Status," click the button to "Invite Operator"; note that this button will not appear if a valid email address is not present in the user's Arctos profile (see step 3 in [Tasks for new users](#tasks-for-new-users)). Doing so will send the user an email notification and they must accept the invitation before you can assign them any permissions (see below).
 
 ### Assign Operator permissions
 
